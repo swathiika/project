@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+ background-image: url('https://th.bing.com/th/id/R.cdda5ebd64270184ba09f0d83db96c38?rik=eX0p9FsP8NC%2bvQ&riu=http%3a%2f%2fstatic.allbackgrounds.com%2fbg%2flavender-plain-layout.jpg&ehk=z%2bruVJrVwY7mPIf%2b94uaSt3LXeSavRZDjMBkpBFLKzI%3d&risl=&pid=ImgRaw&r=0');
+ height:100%;
+ background-repeat:no-repeat;
+ background-position:center;
+ background-size:cover;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>SKINCARE PRODUCTS</h2><br><br><br>
+
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+<a href="https://www.istockphoto.com/photos/sunscreen">
+  <figure>  <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2232378/1160/1160/m1/fpnw/wm1/10250-royalty-free-rf-clipart-illustration-cartoon-bottle-sunscreen-with-text-sun-cream-vector-illustration-blue-sunburst-background-and-text-sun-safety-.jpg?1486232861&s=0d1a7a2bf9198d8f13ecbf77a73fc84c" alt="Serum" style="width:90%" onclick="myFunction(this);"><br><br>
+<figcaption><center>SUNSCREEN</center></figcaption></figure></a>
+  </div>
+  <div class="column">
+<a href="https://www.istockphoto.com/photos/lipbalm">
+     <figure> <img src="https://media.istockphoto.com/vectors/set-of-cosmetics-vector-id480986184?k=6&m=480986184&s=612x612&w=0&h=GxWRN3ntuTngZ-HDAuJAzi_44Q4czk40lGi7APqYjPI=" alt="Lipbalm" style="width:100%" onclick="myFunction(this);"><br><br>
+<figcaption><center>LIP BALM</center></figcaption></figure></a>
+  </div>
+  <div class="column">
+<a href="https://www.istockphoto.com/photos/facemoisturizers">
+    <figure><img src="https://th.bing.com/th/id/R.3ccf7af52e26281d001719a98dafe405?rik=4KgsdxcZ4hShrw&riu=http%3a%2f%2fclipground.com%2fimages%2fcreme-clipart-1.jpg&ehk=P%2fEsBptHzl0O9p5deJ%2bVq4GDusQDeOHQP54hXmkIv6s%3d&risl=&pid=ImgRaw&r=0" alt="Eyegel" style="width:100%"  onclick="myFunction(this);"><br><br>
+<figcaption><center>MOISTURIZING CREAM</center></figcaption></figure></a>
+  </div>
+  <div class="column">
+<a href="https://www.istockphoto.com/photos/bodylotion">
+   <figure> <img src="https://th.bing.com/th/id/R.60ac5ee55d1ba9da1ed13932bf48eb17?rik=Er%2fWzATsWAiBOw&riu=http%3a%2f%2ffreevector.com%2fuploads%2fvector%2fpreview%2f3525%2fFreeVector-Body-Lotion.jpg&ehk=LQop85PMrVac4kzIIBrJ%2ffKisPcRdTVGhJBqcSka2tQ%3d&risl=&pid=ImgRaw&r=0" alt="Scrub" style="width:120%" onclick="myFunction(this);"><br><br>
+ <figcaption><center>BODY LOTION</center></figcaption></figure></a>
+</div>
+</div>
+<p>For purchase ,Visit PRODUCTS</p>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
